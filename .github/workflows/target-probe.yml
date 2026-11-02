@@ -1,0 +1,11 @@
+# Probe: what the runs list says about pull_request_target runs.
+name: Target probe
+on:
+  pull_request_target: # zizmor: ignore[dangerous-triggers] runs no code of the pull request
+    branches: [main]
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 180
