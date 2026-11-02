@@ -1,11 +1,23 @@
-# Probe: what the runs list says about pull_request_target runs.
+# Test of priority-boarding on pull_request_target.
 name: Target probe
 on:
   pull_request_target: # zizmor: ignore[dangerous-triggers] runs no code of the pull request
     branches: [main]
 permissions: {}
 jobs:
-  probe:
+  priority-boarding:
+    permissions:
+      actions: read
+      contents: write
+      pull-requests: read
+      statuses: write
+    uses: udondan/priority-boarding/.github/workflows/priority-boarding.yml@pull-request-target # zizmor: ignore[unpinned-uses] the ref under test
+    with:
+      status-context: target-probe
+      poll-interval-seconds: 10
+      queued-poll-interval-seconds: 15
+  use:
+    needs: priority-boarding
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 180
+      - run: sleep 60
