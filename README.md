@@ -1,3 +1,3 @@
-# priority-boarding e2e
+# boarding-gate e2e
 
-Throwaway repository for the end-to-end tests of [priority-boarding](https://github.com/udondan/priority-boarding), see test/e2e there. Changed by scripts, testing `e2e-fork`.
+Throwaway repository for the end-to-end tests of [boarding-gate](https://github.com/udondan/boarding-gate), see test/e2e there. Changed by scripts, testing `rename-boarding-gate`.
