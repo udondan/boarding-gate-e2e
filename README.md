@@ -1,3 +1,3 @@
 # boarding-gate e2e
 
-Throwaway repository for the end-to-end tests of [boarding-gate](https://github.com/udondan/boarding-gate), see test/e2e there. Changed by scripts, testing `yield-run-not-listed`.
+Throwaway repository for the end-to-end tests of [boarding-gate](https://github.com/udondan/boarding-gate), see test/e2e there. Changed by scripts, testing `main`.
